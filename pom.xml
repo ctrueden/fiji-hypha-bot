@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>34.1.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>net.imagej</groupId>
+	<artifactId>imagej2-assistant</artifactId>
+	<version>0-SNAPSHOT</version>
+
+	<name>ImageJ2 Code Assistant</name>
+	<description>Generate and execute code using AI</description>
+	<url>https://github.com/ctrueden/imagej2-assistant</url>
+	<inceptionYear>2023</inceptionYear>
+	<organization>
+		<name>UW-Madison LOCI</name>
+	</organization>
+	<licenses>
+		<license>
+			<name>Simplified BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<url>https://imagej.net/people/ctrueden</url>
+			<roles><role>founder</role></roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Wei Ouyang</name>
+			<url>https://imagej.net/people/oeway</url>
+			<properties><id>oeway</id></properties>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>None</name>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:https://github.com/ctrueden/imagej2-assistant</connection>
+		<developerConnection>scm:git:git@github.com:ctrueden/imagej2-assistant</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/ctrueden/imagej2-assistant</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/ctrueden/imagej2-assistant/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<main-class>net.imagej.codeassist.Main</main-class>
+		<package-name>net.imagej.codeassist</package-name>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.copyrightOwners>ImageJ2 developers.</license.copyrightOwners>
+
+		<!-- NB: Deploy releases to the SciJava Maven repository. -->
+		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
+		</dependency>
+	</dependencies>
+</project>
